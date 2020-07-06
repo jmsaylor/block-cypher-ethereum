@@ -22,6 +22,10 @@ const transact = async (mode, input, output, wei) => {
         },
       }
     );
+    transaction = await transaction.json();
+
+    console.log(transaction);
+    //We should have a Tx skeleton at this point. There's one more step.
   } catch (error) {
     console.error(error);
   }
